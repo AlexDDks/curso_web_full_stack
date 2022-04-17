@@ -1,0 +1,17 @@
+-Nos vamos a la carpeta donde queremos que quede el repositorio-
+
+-Copiamos el URL del repositorio-
+
+git clone URL ->Clona el repositorio main
+
+git branch -r -> muestra todas las ramas que hay
+
+git checkout "nombre de la rama" -> te posiciona en una rama
+
+git branch "nombre de la rama" -> crea tu rama y apartir de acá ya hiciste tu rama basado en la rama donde estabas posicionado (paralelo a donde clonamos)
+-------------------------------------
+
+-Para clonar sólo una rama del repositorio remoto-
+
+git clone URL -b nombreDeLaRama --single-branch ->Clona el repositorio nombreDeLaRama
+
