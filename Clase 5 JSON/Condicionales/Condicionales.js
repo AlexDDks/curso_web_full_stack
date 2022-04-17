@@ -1,11 +1,11 @@
-//Ambos permiten preguntar si un bloque de código cumple con una confición
+//Ambos permiten preguntar si un bloque de código cumple con una condición o no__
 //para después correr otro bloque de código
 
 //if ternario
-//No lleva llaves, se escribe horizontalmente
+//No lleva llaves, se escribe horizontalmente y se deben escribir las condiciones si se cumplen o no 
 
 
-let fruta = 'Manzana' //condicional con?  ,,  Si se cumple la condición,,: para expresar el sino sucede la condición (es obligatorio)  
+let fruta = 'Manzana' //condicional con?  ,,  Si se cumple la condición y : para expresar el sino sucede la condición (es obligatorio, puede ser un string vacío)  
 let resfruta = fruta == 'Manzana' ? 'Chido, me gustan las manzanas' : 'No gracias, quería manzanas'
 console.log(resfruta) //El resultado de la comparación la pusimos en una variable para poder mostrarla en consola
 
@@ -16,6 +16,7 @@ console.log(trabajo)
 
 
 //Switch
+// Pregunta por algo y si ese algo se cumple ejecuta un bloque de código
 
 let semaforo = 'rojo'
 //Dentro de los paréntesis va la expresión a evaluar (sin =) y de ahí se abren y cierran lla
