@@ -1,0 +1,38 @@
+LOCAL
+
+git init -> convierte la carpeta donde estamos en un nuevo repositorio (sólo se ejecuta una vez por proyecto)
+
+git add .  -> añade todos los archivos de la carpeta al área de ensayo (staging area)
+
+git commit -m "mensaje" -> crea un commit y lo lleva al repositorio local
+
+ó
+
+git commit -am "mensaje" -> add y commit a la vez
+
+git log --oneline -> muestra los commits que hemos hecho
+
+git status -s ->muestra los archivos que tenemos en el repositorio
+
+
+
+
+COMIENZA REMOTO
+
+-Creamos el repositorio-
+
+git remote add origin "URLderepositorio" -> Indica a dónde se va a subir el repositorio
+
+git branch -M main ->Indica que se sube a la rama main (si estamos en otra branch)
+
+git push -u origin main -> sube el repositorio al main
+
+
+
+
+
+
+
+
+
+
