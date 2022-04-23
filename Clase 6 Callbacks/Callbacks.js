@@ -1,6 +1,6 @@
 //Es una función que pasa como parámetro de otra función. La función que recibe el callback decide cuándo utilizarlo
 //Los callbacks normalmente se definen antes de pasar como parámetro. Los callbacks al pasar como parámetros NO SE DEBEN EJECUTAR__
-//Ya que la función padre decide cuándo ejecutarlo
+//ya que la función padre decide cuándo ejecutarlo
 
 
 
@@ -8,7 +8,7 @@
 // //Hacemos las funciones flechas para cada operación de la calculadora
 
 // let sumar = (numero1, numero2) => numero1 + numero2;
-// let resar = (numero1, numero2) => numero1 - numero2;
+// let restar = (numero1, numero2) => numero1 - numero2;
 // let multiplicar = (numero1, numero2) => numero1 * numero2;
 // let dividir = (numero1, numero2) => numero1 / numero2;
 
