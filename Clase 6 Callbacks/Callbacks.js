@@ -1,6 +1,6 @@
-//Es una función que pasa como parámetro de otra función. La función que recibe el callback decide cuándo utilizarlo
-//Los callbacks normalmente se definen antes de pasar como parámetro. Los callbacks al pasar como parámetros NO SE DEBEN EJECUTAR__
-//ya que la función padre decide cuándo ejecutarlo
+/*Es una función que pasa como parámetro de otra función. La función que recibe el callback decide cuándo utilizarlo.
+Los callbacks normalmente se definen antes de pasar como parámetro.Los callbacks al pasar como parámetros NO SE DEBEN EJECUTAR
+ya que la función padre decide cuándo ejecutarlo */
 
 
 
@@ -12,8 +12,7 @@
 // let multiplicar = (numero1, numero2) => numero1 * numero2;
 // let dividir = (numero1, numero2) => numero1 / numero2;
 
-// //Se define la calculadora con el 3er parámetro como callback,
-// //Es en el return donde especificamos que el 3er parámetro sea una función que se ejecute con 2 parámetros
+/*Es en el return donde especificamos que el 3er parámetro sea una función que se ejecute con 2 parámetros*/
 // let calculadora = (numero1, numero2, operacion) => operacion(numero1, numero2)
 
 // console.log(calculadora(18, 3, sumar))
