@@ -1,0 +1,9 @@
+Cliente servidor se utiliza en el contexto de desarrollo de servicios web
+El cliente es el dispositivo que hace peticiones de recursos o servicios a un servidor,
+puede ser una compu, consola, etc.
+
+El servidor es el equipo que brinda los servicios a los dispositivos conectados a él mediante
+la red. Lo que retorna normalmente es la página web
+
+La arquitectura cliente-servidor hace referencia a un modelo de comunicación
+que vincula a varios dispositivos con una red (internet)
