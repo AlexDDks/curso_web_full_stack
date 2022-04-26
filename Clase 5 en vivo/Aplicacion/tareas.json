@@ -1,0 +1,14 @@
+[
+    {
+        "título": "Practicar el switch",
+        "estado": "terminada"
+    },
+    {
+        "título": "Practicar el for",
+        "estado": "En progreso"
+    },
+    {
+        "título": "Entender el objeto literal y JSON",
+        "estado": "Pendiente"
+    }
+]
