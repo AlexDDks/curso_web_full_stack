@@ -1,0 +1,47 @@
+body {
+    background-color: salmon;
+    font-family: 'Sans serif';
+}
+
+h1 {
+    font-family: 'Georgia'
+}
+
+h4 {
+    font-family: 'Comforter Brush';
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 17px
+}
+
+/*Normalize.css es una librería que permite hacer RESETS, que es algo que permite generar estilos para que todos los elementos del HTML se vean constantes en diferentes navegadores
+Se baja la hoja de archivo en la misma ubicación donde tenemos la hoja de estilo y se vincula en el archivo html YA SE HIZO EN EL HTML
+
+Crearemos selectores de clase*/
+.parrafo-destacado {
+    color: white;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.titulo-en-grande {
+    color: silver;
+    font-size: 65px;
+}
+
+
+/* Crearemos selectores descendente, se leen desde atrás hacia adelante, se da estilo a una etiqueta strong que está en una etiqueta p*/
+/* El selector descendente permite agreagar un estilo a un p y a otros no, la etiqueta puede ser un nombre arbitrario */
+
+
+p strong {
+    background-color: white;
+    font-style: italic;
+    color: green;
+}

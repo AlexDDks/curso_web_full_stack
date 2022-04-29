@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(238, 170, 81);
+    font-size: 20px;
+}
+
+header a {
+    font-style: italic;
+}
+
+article {
+    font-family: cursive;
+}
