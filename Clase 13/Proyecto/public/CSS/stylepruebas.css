@@ -1,0 +1,19 @@
+/* Acá nos damos cuenta que la sintaxis que estamos usando es: PARA TODOS LOS ELEMENTOS a
+QUE ESTÉN DENTRO DEL BODY, entonces se aplica, pero podemos minimizar hasta la etiqueta padre
+más próxima del elemento que estemos interesados de aplicar las reglas de estilo, en este caso
+sería la etiqueta <ul>  */
+/* 
+body a {
+    display: block;
+} */
+
+ul a {
+    display: block;
+}
+
+/* Muchas reglas de estilo como width o height sólo se aplican a elementos de bloque,
+sería bueno revisar esta información */
+
+/* Cuando utilicemos algúnas propiedades como padding, un elemento de html incrementará
+sus dimensiones, por lo cual para evitar ello debemos utilizar la herramienta box-sizing:border-box,
+es de valor mencionar que margin no agrega dimensiones al tamaño del elemento */

@@ -1,0 +1,179 @@
+/* A todos los elementos se le plaicará el box-sizing */
+/* Con el selector universal hemos puesto que el elemento de HTML
+no aumente su tamaño si por ejemplo implementamos un padding, sino
+que respete el tamaño original y vea la manera de adaptar el contenido
+del contenedor a las dimensiones establecidas*/
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: white;
+    font-family: 'Sans serif';
+}
+
+/*
+.contenedor01{
+    /* Implementamos que el máximo del ancho sea Npx para generar que el contenedor nunca supere este valor de ancho */
+/* max-width: 900px; */
+/* Ya que el article está dentro del body, el tamaño será porcentual al tamaño del body (contenedor padre)*/
+/* width: 80%; */
+/* Relleno (tipo margen)*/
+/* padding: 20px; */
+/* Borde sólido */
+/* border: solid 5px black; */
+/* El contenedor se ajusta a lo ancho pero no a lo alto, así que mejor no se implementa tamaño a nivel de altura, sino que se defina por el contenedor en sí */
+/* background-color: salmon; */
+/* Debido a los elementos anteriores, el box está cambiando su tamaño, al 80% establecido se le suman los pixeles del padding y border, por eso hay que usar el box-sizing */
+/* El elemento descuenta de su ancho lo que se le añadió de border y padding, nucna el elemento superará el % que se le estableció al inicio, lo mejor es usar el selector universal para esto */
+/* box-sizing: border-box */
+/* Ponemos margen auto para que se centre el contenedor */
+/* margin: auto; para que se centre con respecto a los laterales */
+/* ; */
+/* } */
+
+
+/* Podemos agrupar algunas propiedades de algunas clases, si son comunes */
+
+.contenedor01,
+.contenedor02 {
+    padding: 20px;
+    max-width: 500px;
+}
+
+/* Podemos utilizar el vw o el % para expresar medidas relativas de los
+elementos de HTML, el % estará en función del contenedor padre, es decir,
+si definimos el ancho como el x %, este porcentaje será tomando de referencia el
+contenedor padre. El vw toma de referencia el viewport */
+
+.contenedor01 {
+    width: 90vw;
+    background-color: salmon;
+    ;
+    /* Sino definimos el alto que es lo recomendable, entonces se toma
+    como alto el tamaño del contenedor */
+}
+
+.contenedor02 {
+    width: 50vw;
+    background-color: green;
+    ;
+}
+
+/* @media (min-width: 576px) {
+
+    /* Agrupamos selectores tienen cosas en común */
+/* .contenedor01,
+    .contenedor02 {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+/* Las medias quereis son reglas de estilo que se aplican si
+y sólo sí se cumplen ciertas condiciones, en este ejemplo el ancho mínimo,
+Desarrollando de manera recomendada desde la versión mobile hasta la versión
+de escritorio */
+
+/* Si como mínimo tenemos 769px */
+/* @media (min-width: 769px) { */
+
+/* Agrupamos selectores tienen cosas en común */
+/* .contenedor01 {
+        background-color: black;
+        color: white
+    }
+
+    .contenedor02 {
+        background-color: green;
+        color: red; */
+/* }
+}
+
+/*  */
+/* @media (min-width: 992px) { */
+
+/* Agrupamos selectores tienen cosas en común */
+/* .contenedor01,
+    .contenedor02 {
+        border: solid 10px yellow;
+    }
+} */
+
+
+/* @media (min-width: 1200px) { */
+*/
+/*  */
+/* Agrupamos selectores tienen cosas en común */
+/* .contenedor01,
+    .contenedor02 {
+        max-width: 1100px;
+    }
+} */
+
+
+
+
+
+/*
+.oculto{
+  display:none;
+} */
+
+
+
+
+
+/* Implementamos una media quereis, se manipula únicamente las propiedades que queremos modificar, las que no, no tenemos que cambiar */
+/* @media (min-width: 570px) {
+    .contenedor01{
+
+        width: 45%;
+         padding: 20px;
+         border: solid 5px blue;
+         background-color: silver;
+         color:gold;
+        margin: auto;
+                ;
+    }
+    .oculto{
+        display: block;
+    }
+} */
+
+/* Se implementan las X media quereis que se requiera para que el sitio se vea bien */
+
+/* @media (min-width: 900px) {
+    .contenedor01{
+
+        width: 95%;
+
+         border: solid 5px black;
+         background-color: salmon;
+         color:black;
+        margin: auto;
+        ;
+    }
+} */
+
+/* Los breakpoints son estandar
+576
+768
+992
+1200,
+Por lo tanto se recomienda hasta 4 media quereis */
+
+
+
+
+/* .contenedor02{ */
+/*Vamos a usar medidas de viewport , así que la referencia es la medida del viewport, no del contenedor padre*/
+/* width: 90vw; */
+/* padding: 20px; */
+/* border: solid 5px red; */
+/* background-color: green; */
+/* box-sizing: border-box */
+/* ;
+} */
