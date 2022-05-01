@@ -36,6 +36,14 @@ div {
     width: 90vw;
     padding: 5%;
     margin: auto;
+    background-color: aqua;
+}
+
+/* Acá podemos ver cómo las reglas de estilo no son pisadas por la regla de título DIV,
+creo que debido a que las etiquetas de clase deben de pesar más en prioridad, sino no entiendo
+por qué no son pisadas */
+.texto {
+    background-color: blue;
 }
 
 .container1 {
@@ -45,3 +53,43 @@ div {
 .container2 {
     background-color: green;
 }
+
+.oculto {
+    display: none;
+}
+
+div {
+    background-color: aqua;
+}
+
+/* 
+@media(min-width:360px) {
+    div {
+        background-color: yellow;
+    }
+
+    .container1,
+    .container2 {
+        background-color: yellow;
+    }
+}
+
+@media(min-width:760px) {
+
+    .container1,
+    .container2 {
+        background-color: green;
+    }
+}
+
+@media(min-width:1000px) {
+
+    .container1,
+    .container2 {
+        background-color: yellow;
+    }
+
+    .oculto {
+        display: block;
+    }
+} */
