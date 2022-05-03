@@ -55,8 +55,18 @@ por qué no son pisadas */
     background-color: green;
 }
 
+/* Si nosotros queremos ocultar con display none, entonces
+    HTML no representará a la caja (espacio) que ocupa la etiqueta
+    en el body, sin embargo visibility:hidden sí respeta el espacio que
+    la caja ocupa, sólo esconde el contenido, por lo que el display
+    block al ser renderizado va a ocupar un espacio que no está
+    ahí contemplado, el visibility:visible sí va a tener el espacio
+    contemplado, por lo que no habrá un problema de que se genera una
+    caja ahí porque el espacio ya está asignado (pero no mostrado)*/
+
 .oculto {
-    display: none;
+    visibility: hidden;
+    /* display: none; */
 }
 
 /* El div no está siendo pisado debido a que usamos selectores de clase.
@@ -98,7 +108,10 @@ div {
         background-color: yellow;
     }
 
+
+
     .oculto {
-        display: block;
+        /* display: block; */
+        visibility: visible
     }
 }
