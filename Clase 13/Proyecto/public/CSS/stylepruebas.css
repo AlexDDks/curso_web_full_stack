@@ -27,11 +27,16 @@ queremos que este ocupe todo el viweport, también nos damos cuenta que si aplic
 indicador, el contenedor donde estemos trabajando reduce su dimensión debido a que tenemos el
 content box sizing en border box*/
 
+/*Podemos notar que he puesto el margen en 0 al inicio, esto es para que el body ocupe todo el viewport
+después he hecho un margin auto, esto es para que cuando se sobrepase el max-width, el body quede centrado
+con respecto a su contenedor padre que es la etiqueta HTML  */
+
 body {
     margin: 0;
     width: 100 vw;
     border: 2px red solid;
     max-width: 1200px;
+    margin: auto;
 }
 
 
