@@ -1,16 +1,3 @@
-/* Acá nos damos cuenta que la sintaxis que estamos usando es: PARA TODOS LOS ELEMENTOS a
-QUE ESTÉN DENTRO DEL BODY, entonces se aplica, pero podemos minimizar hasta la etiqueta padre
-más próxima del elemento que estemos interesados de aplicar las reglas de estilo, en este caso
-sería la etiqueta <ul>  */
-/* 
-body a {
-    display: block;
-} */
-
-/* ul a {
-    display: block;
-} */
-
 /* Muchas reglas de estilo como width o height sólo se aplican a elementos de bloque,
 sería bueno revisar esta información */
 
