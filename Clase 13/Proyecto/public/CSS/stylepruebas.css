@@ -62,7 +62,7 @@ por qué no son pisadas */
     block al ser renderizado va a ocupar un espacio que no está
     ahí contemplado, el visibility:visible sí va a tener el espacio
     contemplado, por lo que no habrá un problema de que se genera una
-    caja ahí porque el espacio ya está asignado (pero no mostrado)*/
+    caja ahí porque el espacio ya está asignado (pero no mostrado) */
 
 .oculto {
     visibility: hidden;
