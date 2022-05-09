@@ -1,0 +1,3 @@
+Flexbox es una metodología de posicionamiento, en donde la mayoría
+de las propiedades se van a declarar sobre el contenedor padre de los
+elementos en donde queremos implementar flexbox.

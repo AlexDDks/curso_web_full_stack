@@ -1,0 +1,131 @@
+/* Existen líneas que sí deben */
+
+
+* {
+    box-sizing: border-box;
+    /* Esto es para que los elementos no incrementen su valor
+más allá de límites que nosotros establezcamos */
+}
+
+
+/* Podemos observar acá sin haber aplicado el flexbox,
+los tamaños que ocupa cada contenedor  */
+
+div {
+    border: 2px dotted red;
+}
+
+p {
+    font-size: 24px;
+    border: 1px blue solid;
+}
+
+/* Ahora podemos observar en este punto cómo todos los
+elementos div ocupan una posición al lado del otro sin
+importar que son elementos de línea */
+body {
+    display: flex;
+}
+
+/* Acá podemos observar cómo ya no se hace más chico el espacio
+entre los divs, sino que se minimiza hasta el punto donde 
+la fuente lo permite*/
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* Acá definimos al eje principal como el "X" (horizontal)
+    y que los elementos hijos del contenedor se van a disponer
+    en esta horientación. Esta configuración viene por defecto */
+    border: 2px dotted green;
+    height: 50vh;
+    /* Si bien no es recomendable darle un heigth al body, lo hice
+para probar las propiedades de flexbox en el eje transversal y así
+tuvieran los contenedores un espacio por donde moverse de manera vertical */
+}
+
+
+body {
+
+    flex-direction: column;
+    /* Acá definimos al eje principal como el "Y" (vertical)
+    y que los elementos hijos del contenedor se van a disponer
+    en esta horientación */
+
+    /* Acá podemos observar que los hijos se disponen en dirección
+    del nuevo main axis que es el Y, por lo que los hijos se disponen
+    en dicha dirección */
+
+    /* otros valores posibles son el row-reverse y el colum-reverse,
+    que dispone a los contenedores hijos en dirección opuesta */
+}
+
+/* Podemos alinear los elementos a través de los ejes: en el main axis con
+JUSTIFY-CONTENT y en el cross axis con el ALINGN-ITEMS */
+body {
+    flex-direction: row;
+    justify-content: flex-start;
+    /*Flex-start es el valor por defecto y los alinea desde el inicio sin espacios */
+    justify-content: flex-end;
+    /*Flex-end los situa al final sin espacios entre sí */
+    justify-content: center;
+    /*center los situa al centro sin espacios entre sí */
+    justify-content: space-between;
+    /*space-between los situa al centro con espacios entre sí
+    el primer item al inicio del main axis y el último ítem al final */
+    justify-content: space-around;
+    /*space-around los situa al centro con espacios uniformes en todo el eje */
+}
+
+/* Para el cross axis utilizamos el align-items */
+/* Por alguna razón que desconozco, en todos los casos existe
+un espacio entre las 2 filas de los contenedores, CHECAR ESO */
+body {
+    align-items: stretch;
+    /* align-items: stretch viene por defecto y con esto los
+    ítems ocuparán todo el contenedor */
+    /* align-items: flex-start; */
+    /* con esto, los ítem se alinean al inicio del eje transversal en función
+    también de la cantidad de su contenido */
+    /* align-items: flex-end; */
+    /* con esto, los ítem se alinean al final del eje transversal */
+    /* align-items: center; */
+    /* con esto, los ítem se alinean al centro del eje transversal */
+}
+
+
+/* Cada ítem viene enumerado en función del orden con lo que lo colocamos
+en el HTML, para cambiar el orden de un ítem, entonces aplicamos la propiedad
+order:-1(para moverlo a una posición anterior) directamente sobre el item,
+por defecto todos los ítems vienen con valor de order:0 */
+
+/* Podemos observar cómo el contenedor 2 ha pasado al contenedor 1 */
+.cont2 {
+    order: -1
+        /* El valor order:1 lo manda al final de todos los elementos
+        Ya que todos los ítems tienen valor por defecto 0, si queremos una
+        configuración especial, debemos colocarles un order específico a cada
+        uno de ellos y estos se irán ordenando respetando la secuencia desde
+        el menor al mayor número*/
+}
+
+/* También podemos aplicar la propiedad align-self a un ítem particular
+el cual va a recibir los mismos valores y tendrá los mismos resultados
+que el align-items, sin embargo el primero será aplicado directamente
+a un item */
+
+.cont2 {
+    align-self: flex-start;
+}
+
+/* Exsite la propiedad flex-grow que se aplica también a los ítems, con esta
+se puede controlar el tamaño de estos si es que pueden tomar un mayor o menor tamaño */
+
+.cont2 {
+    flex-grow: 1;
+    /* Con valor de 1, este tomará el mayor valor que pueda, donde 1=100% y
+    por lo tanto 0=0% */
+}
+
+/* Todas estas propiedades OBVIAMENTE sólo se van a aplicar
+si el contenedor padre es un flex-container */
