@@ -40,6 +40,7 @@ por qué no son pisadas */
 
 .container2 {
     background-color: green;
+    font-family: koulen;
 }
 
 /* Si nosotros queremos ocultar con display none, entonces
@@ -64,6 +65,16 @@ no respetará el max-width, ya que este será dependiente del viewport y no
 de las dimensiones del body, por lo que creo es mejor en esta aplicación el
 depender de unidades relativas del body de*/
 
+/* Actualización: CSS siempre prioriza los selectores más específicos
+para aplicar estilos, por lo que se prioriza el selector de CLASE
+o aquella que esté más especificada, por ejemplo en el caso de que tengamos
+body section article.... así. Aunque CSS es hojas de estilo en cascada
+por lo cual los estilos se leen de arriba para abajo, pero siempre priorizando
+los selectores más específicos si es que hay alución a dos elementos HTML */
+
+/* Tambipen se puede usar selectores de id y combinados */
+
+/* h2.subtitulo: esta etiqueta combinada se lee "un elemento h2, con clase subtítulo */
 div {
     width: 90%;
     /* padding: 5%; */
