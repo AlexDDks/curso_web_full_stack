@@ -99,6 +99,10 @@
                 <!-- El button permite hacer un botón con 2 atributos nada más -->
                 <button type="reset">Reset</button>
 
+                <!-- la principal (¿única?) diferencia entre <button type="submit"> e <input type="submit"> es el tipo de
+                    contenido que se puede presentar con cada uno de ellos. El primero puede contener elementos HTML
+                    (p.e.: texto + imágenes) mientras que el segundo sólo puede contener texto: -->
+
                 <label for="">
                     <input type="radio" name="" id=""> TEXTO
                     <!-- un input de tipo radio permite crear un botón circular para seleccionar, para que se vea chido,
@@ -118,15 +122,27 @@
                 <!-- SÓLO SE SELECCIONARÁ UNA OPCIÓN CUANDO UTILICEMOS EL ATRIBUTO name CON EL MISMO NOMBRE,
                 ASÍ EL NAVEGADOR SABRÁ QUE SE TRATA SÓLO DE UN CAMPO -->
 
-                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo1">Pasatiempo1 </label>
-                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo2">Pasatiempo2 </label>
-                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo3">Pasatiempo3 </label>
+                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo1">Pasatiempo1
+                </label>
+                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo2">Pasatiempo2
+                </label>
+                <label for=""><input type="checkbox" name="pasatiempos" id="" value="Pasatiempo3">Pasatiempo3
+                </label>
 
                 <!-- Con este atributo checkbox podemos crear un pequeño formulario de opción múltiple,
                 utilizando el mismo name, el navegador interpretará esto sabiendo que se trata de un sólo campo
                 y al enviarse esta información, todas las opciones sean parte de un mismo response -->
 
                 <!-- El atributo value es muy importante, ya que es lo que el backend recibirá -->
+
+                <!-- FORMULARIOS AVANZADOS -->
+
+                <input type="date" name="fechaDeNacimiento" value="2022-08-08">
+                <!-- Desplegará un calendario con la fecha del value -->
+                <input type="file" name="fotoDePerfil" multiple accept=".jpg,.png">
+                <!-- Genera un botón de explorar para elegir algún archivo -->
+                <span class="feedback"></span>
+                <!-- será la encargada de recibir el texto resultante de la validación de datos -->
 
     </form>
 </body>
