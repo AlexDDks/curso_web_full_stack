@@ -1,52 +1,53 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Roboto';
     ;
 }
 
-.main-header{
+.main-header {
     background-color: #EAC926;
     padding: 20px;
-    
-} 
 
-.logo{
+}
+
+.logo {
     width: 200px
 }
 
-.copy-header{
+.copy-header {
     font-weight: 400;
     text-align: center;
-    
+
 }
 
-.hamburger-button{
+.hamburger-button {
     background-color: #03264C;
-    color:white;
-    display:block;
-    max-width:30px;
+    color: white;
+    display: block;
+    max-width: 30px;
     padding: 7px 0px;
-    border-radius:8px;
-    text-align:center;
-    font-size:17px;
-    margin:auto;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
 }
 
-.main-header-bottom-bar{
-    display:none;
-   
+.main-header-bottom-bar {
+    display: none;
+
 }
 
-.main-header-bottom-bar ul{
+.main-header-bottom-bar ul {
     list-style: none;
-    margin:0px;
-    padding:0px;
-    
-    }
+    margin: 0px;
+    padding: 0px;
 
-.main-header-bottom-bar a{
+}
+
+.main-header-bottom-bar a {
     text-decoration: none;
     color: #222222;
     display: inline-block;
@@ -54,72 +55,120 @@ body{
     ;
 }
 
-.control{
-    width:90%;
+.control {
+    width: 90%;
     padding: 8px;
 }
 
-.formulario{
+.formulario {
     padding: 20px 15px;
 }
-body div{
-    margin-bottom:15px;
+
+body div {
+    margin-bottom: 15px;
     display: block;
     font-style: italic;
 }
 
 @media (min-width:768px) {
-    .main-header-top-bar{
-        display:flex;
+    .main-header-top-bar {
+        display: flex;
         justify-content: space-between;
-        
+
     }
-    .copy-header{
+
+    .copy-header {
         max-width: 350px;
         text-align: right;
     }
-    .hamburger-button{
+
+    .hamburger-button {
         display: none;
     }
-    .main-header-bottom-bar{
-       
-        display:flex;
+
+    .main-header-bottom-bar {
+
+        display: flex;
         justify-content: space-between;
     }
-    .main-header-bottom-bar ul{
+
+    .main-header-bottom-bar ul {
         display: flex;
     }
-    .main-header-bottom-bar li{
+
+    .main-header-bottom-bar li {
         margin: 0 5px;
     }
-    .main-header-bottom-bar i{
+
+    .main-header-bottom-bar i {
         margin: 0 0 0 5px;
-}
-}
-@media (min-width: 1200px){
-    .main-header-top-bar, .main-header-bottom-bar{
-        max-width: 1200px;
-        margin:auto;
     }
-   
-    .main-header-top-bar{
+}
+
+@media (min-width: 1200px) {
+
+    .main-header-top-bar,
+    .main-header-bottom-bar {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-top-bar {
         align-items: center;
     }
-    .logo{
+
+    .logo {
         width: 250px;
     }
-    .copy-header{
+
+    .copy-header {
         max-width: none;
         font-size: 20px;
         font-weight: 400;
         margin: 15px;
-        
-       
+
+
     }
-    .main-header-bottom-bar li{
+
+    .main-header-bottom-bar li {
         margin: 0 10px;
     }
-    .main-header-bottom-bar a{
+
+    .main-header-bottom-bar a {
         font-size: 19px;
     }
 }
+
+/* Podemos implementar los pseudoclases, por ejemplo para cuando
+queramos cambiar el color de un enlace visitado: ejemplo
+
+a:visited{
+    color: green;
+*/
+
+/* El pseudo elemento hover, se puede aplicar a cualquier elemento de HTML,
+en el ejemplo de los enlaces:
+
+a:hover{
+    color: grey;
+}*/
+
+/* La pseudo clase focus normalmente se aplica a los formularios
+input:focus{
+color: orange;
+font-weigth: bold
+}
+
+
+/* LOS PSEUDOELEMENTOS manipulan el contenido de un elemento de HTML */
+/* el pseudoelemento before: 
+h2::before{
+    content: 'voy antes',}
+Dicta que antes de cada h2 se le agregará el texto voy antes.
+
+h2::after{
+    content: 'voy antes',}
+Dicta que después de cada h2 se le agregará el texto voy antes.
+*/
+
+*/
