@@ -1,2 +1,18 @@
 Hay información relevante hecha por mi, en el archivo stylepruebas, sobre
 la manera correcta de utilizar los selectores de etiquetas y clases.
+
+-Algo que no mencioné son los em:
+
+Son una dimensión que se calcula a partir de su contenedor padre:
+Si el contenedor padre tiene de ancho 1000px, ese será 1em:
+por lo tanto si hablamos de 0.5em, estaremos hablando de manera
+absoluta de 500px. 
+
+Normalmente se utiliza en los tamaños de las fuentes:
+
+Si el fontzise en el body es de 16px, si a un div, hijo del body le ponemos un
+fontsize de 1em, este será igual de 16px, si el div tiene un hijo, entonces
+el em va a ser también de 16px cuando establezcamos 1em
+
+La diferencia con el REM, es que este toma en cuenta el tamaño de fuente
+del HTML, es decir del documento completo. No depende directamente de su padre.

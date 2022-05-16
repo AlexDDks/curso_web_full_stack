@@ -3,7 +3,10 @@ sería bueno revisar esta información */
 
 /* Cuando utilicemos algúnas propiedades como padding, un elemento de html incrementará
 sus dimensiones, por lo cual para evitar ello debemos utilizar la herramienta box-sizing:border-box,
-es de valor mencionar que margin no agrega dimensiones al tamaño del elemento */
+es de valor mencionar que margin no agrega dimensiones al tamaño del elemento, osea con el border-box
+el valor del width de un elemento va a ser padding+caja de elemento, mientras que con content-box va 
+a ser sólo la caja así que cuando agregamos padding, las dimensiones incrementan del contenedor, mientras
+que con border-box, el width de la caja disminuye para que se respete el width que se le asignó al inicio */
 
 * {
     box-sizing: border-box;
