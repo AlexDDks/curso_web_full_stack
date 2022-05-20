@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+    <header class='main-header'>
+        <div class='main-header-top-bar'>
+            <img src="/img/logo-mercado-liebre.svg" class='logo'>
+            <h2 class='copy-header'>
+                <i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito
+            </h2>
+        </div>
+        <a href="#" class='hamburger-button'><i class="fas fa-bars"></i></a>
+        <nav class='main-header-bottom-bar'>
+            <ul class='left-navbar'>
+                <li><a href="#"></a>Ofertas</li>
+                <li><a href="#"></a>Tiendas oficiales</li>
+                <li><a href="#"></a>Vender</li>
+                <li><a href="#"></a>Ayuda</li>
+            </ul>
+            <ul class='right-navbar'>
+                <li><a href="#">Creá tu cuenta</a><i class="fas fa-credit-card"></i></li>
+                <li><a href="#">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Acá comienza el formulario -->
+    <form action="/crear-producto" method="POST" class='formulario'>
+        <div>
+            <!-- Texto que acompaña a cada producto -->
+            <label for="">Nombre del producto</label>
+            <!-- El atributo name le da nombre a cada input y el backend pueda interpretarlo, no se visualiza, solo sirve para el backend -->
+            <input type="text" name="Nombre" class="control">
+        </div>
+        <div>
+            <!-- Texto que acompaña a cada producto -->
+            <label for="">Precio del producto</label>
+            <!-- Con placeholder se escribe sobre la barra donde el cliente escribe -->
+            <input type="text" name="Precio" placeholder="Coloque el precio" class="control">
+        </div>
+        <div>
+            <label for="">Descripcion</label>
+            <textarea name="descripcion"></textarea>
+        </div>
+        <div>
+            <!-- Texto que acompaña a cada producto -->
+            <label for="">Está en oferta</label>
+            <input type="radio" name="enOferta" class="control">
+        </div>
+        <div>
+            <label for="">Categoria</label>
+            <!-- La lista desplegable se hace con select y agrupamos opciones -->
+            <select name="Categoria" class="control">
+                <!-- El atributo value sirve para refereciar al backend El value se envia al backend, el option se envia al visitante -->
+                <option value="Hogar">Hogar</option>
+                <option value="Electro">Electro</option>
+                <option value="Indumentaria">Indumentaria</option>
+            </select>
+            <div>
+                <!-- Se envia submit a donde le diga el action -->
+                <button type="submit">Guardar</button>
+                <button type="reset">Reset</button>
+
+
+    </form>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ipsam, quaerat mollitia sed totam obcaecati.
+        Molestias totam vel quam nisi laboriosam, sit, sapiente debitis iste minima esse, fugit adipisci ipsam.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde quos aliquam asperiores nemo dicta,
+        veniam officia, accusantium incidunt odio reiciendis aspernatur alias nesciunt. Nemo amet nisi ipsum deserunt
+        dolorum.</p>
+
+    <article class='producto'>
+        <img src="/img/img-samsung-galaxy-s10.jpg" alt="">
+        <h2>Samsung Celular</h2>
+    </article>
+
+    <article class='producto'>
+        <img src="/img/img-samsung-galaxy-s10.jpg" alt="">
+        <h2>Samsung Celular</h2>
+    </article>
+
+    <article class='producto'>
+        <img src="/img/img-samsung-galaxy-s10.jpg" alt="">
+        <h2>Samsung Celular</h2>
+    </article>
+
+</body>
+
+</html>

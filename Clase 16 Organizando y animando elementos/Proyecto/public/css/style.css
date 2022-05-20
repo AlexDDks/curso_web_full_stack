@@ -1,0 +1,258 @@
+/* En este módulo comenzamos a utilizar la herramienta de posicionamiento
+position, la cual viene a aportar funcionalidades que con Flexbox no podíamos,
+como la sueprposición de elementos, position puede tomar varios valores, pero
+viene por defecto con el valor "static" */
+
+/* Con position relative podemos comenzar a mover las cajas, con la cantidad de
+pixeles que queramos que se mueva en el top-left-bottom o right, los elementos se
+desplazan con respecto a su posición original sin alterar a todos los demás elementos.
+Cuando se mueva la caja, el lugar original que ocupaba seguirá siendo ocupado*/
+
+/* Para mover un elemento, si la magnitud de movimiento es positivo, entonces la caja se
+empujará desde el costado donde se asignó el valor, si es negativo, entonces partiendo desde
+el costado donde se especifique, se tirará desde ese punto. Por ejemplo: si decimos
+left:50px, el elemento será empujado desde la izquierda a la derecha 50 px y viceversa */
+
+/* Con position absolute, movemos todo tomando como referencia el body, por ejemplo
+si le decimos que se mueva 50px a la derecha, se movera a 50 pixeles del border del body,
+si le decimos que se mueva 50px hacia abajo, se movera a la posición que correspondiente
+a una distancia de 50px del borde superior del body */
+
+/* Si nosotros le ponemos al contenedor padre de los items la propieda relative, entonces
+cuando utilicemos el position absolute a los items, estos tomarán en cuenta la posición
+con respecto del contenedor padre, de lo contrario tomarán como referencia el body*/
+
+/* Cuando usamos el position absolute, el item que se mueve deja su espacio vacío, por lo
+que otro item ocupará su lugar y se desplazarán las cajas, cosa que no pasa con el
+position:relative */
+
+/* Con position fixed, al desplazarse el documento haciendo scroll, la caja se quedará en
+el mismo lugar, tomando como referencia valores del body */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    ;
+}
+
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+    /* ponemos al header que con el scroll ya no se mueva */
+    position: fixed;
+    /* Le damos las coordenadas donde queremos que se posicione */
+    top: 0;
+    /* Le aplicamos el z-index para no quede debajo de los productos */
+    z-index: 1;
+
+    /* La propiedad z index nos ayuda a decir cómo se mostrarán los elementos
+    superpuestos, el cual indica entorno a su valor su posición. A mayor valor,
+    estará la caja más arriba. Sólo funciona con elementos POSICIONADOS */
+}
+
+.logo {
+    width: 200px;
+    animation: aumentar 2000ms linear infinite alternate;
+}
+
+/* Para una transición que no necesite del hover, sino que deseamos que siempre esté así,
+existen las animaciones las cuales se hacen mediante el keyframes, partimos de 0% que establece
+lo que sucederá al inicio de la animación y con 100% al final*/
+
+/* Finalmente en la regla de estilo del elemento a animar agregamos las propiedades
+animation name, duration, iteration, etc... */
+
+@keyframes aumentar {
+    0% {
+        transform: scale(.5);
+    }
+
+    50% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.hamburger-button {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 30px;
+    padding: 7px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
+}
+
+.main-header-bottom-bar {
+    display: none;
+
+}
+
+.main-header-bottom-bar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.main-header-bottom-bar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    font-size: 17px;
+    ;
+}
+
+.producto {
+    width: 100%;
+    padding: 0 15px;
+    margin: 30px 15px;
+    border: solid 5px gray;
+    /* Para que los elementos en él, se posiciones entorno a este */
+    position: relative;
+}
+
+.producto img {
+    width: 100%;
+}
+
+/* Al hacer hover el nombre h2 aparece */
+.producto:hover h2 {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 75%;
+
+    /* Para hacer una transición utilizamos la pseudo clase hover,
+    le indicamos a css qué queremos que suceda cuando pasamos el cursor
+    por encima */
+}
+
+
+.producto h2 {
+    background-color: rgba(104, 104, 104, .6);
+    color: white;
+    padding: 15px;
+    margin: 0;
+    /* Se mueve absolutamente al elemento producto */
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    /* añadimos funcionalidad flexbox para que el texto esté al centro de main y cross */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Todas las propiedades en el hover se van a transicionar, las transiciones se dan en el elemento donde se declaran */
+    transition: all 450ms;
+
+    /* Con la propiedad transition le indicamos al navegador que el hover tenga
+    un cambio paulatino (transición), así no se verá tan brusco. Se le dice qué propiedad
+    queremos transicionar y de ahí en ms el tiempo de la transición. TRANSITION TIENE QUE IR
+    EN LA REGLA DE ESTILO DONDE NO ESTÁ EL HOVER*/
+
+    /* Como queremos transicionar todos los hover, entonces usamos el valor all */
+}
+
+.control {
+    width: 90%;
+    padding: 8px;
+}
+
+/* Le ponemos un margen superior para que no quede por debajo del main header ya que este último está fixed*/
+.formulario {
+    padding: 20px 15px;
+    margin-top: 240px;
+}
+
+body div {
+    margin-bottom: 15px;
+    display: block;
+    font-style: italic;
+}
+
+@media (min-width:768px) {
+    .main-header-top-bar {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .copy-header {
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .main-header-bottom-bar {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-header-bottom-bar ul {
+        display: flex;
+    }
+
+    .main-header-bottom-bar li {
+        margin: 0 5px;
+    }
+
+    .main-header-bottom-bar i {
+        margin: 0 0 0 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .main-header-top-bar,
+    .main-header-bottom-bar {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-top-bar {
+        align-items: center;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .copy-header {
+        max-width: none;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 15px;
+
+
+    }
+
+    .main-header-bottom-bar li {
+        margin: 0 10px;
+    }
+
+    .main-header-bottom-bar a {
+        font-size: 19px;
+    }
+}
