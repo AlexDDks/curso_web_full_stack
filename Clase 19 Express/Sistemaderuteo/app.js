@@ -14,7 +14,7 @@ let rutasProductos = require('./routes/productos')
 app.use('/', rutasMain) //Se aclara que todas las solicitudes a esta ruta, serán procesadas por la variable rutasMain, la cual tiene la funcionalidad del módulo del archivo main.js 
 app.use('/productos', rutasProductos)
 
-app.get('/contacto', (req, res) => {
+app.get('/contacto', (req, res) => { //Esta ruta no está ruteada a ningún router o controlador
     res.send('Déjanos tu contacto')
 })
 
