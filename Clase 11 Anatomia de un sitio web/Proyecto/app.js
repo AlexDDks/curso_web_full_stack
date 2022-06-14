@@ -20,4 +20,5 @@ app.listen(3000, () => {
 //Enviamos la respuesta en forma de un archivo html usando sendFile
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'))//ponemos la ruta absoluta del archivo html usando dirname (no se aceptan rutas relativas)
+
 })//Generamos ruta, cuando entremos a la ruta local 3000, respondemos con una solicitud
