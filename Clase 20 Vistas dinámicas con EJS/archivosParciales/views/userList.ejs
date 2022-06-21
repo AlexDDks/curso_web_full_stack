@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+
+<body>
+    <!-- Acá añadimos un archivo parcial con el header, el cual se repetirá en toda la página -->
+    <%- include('partials/header.ejs')%>
+
+        <ul>
+            <!-- Si nos damos cuenta, así siempre se muestran los 3, por lo que en el controlador debe haber cierta lógica que controle la base de datos de los usuarios 
+        <li>1: Dario</li>
+        <li>2: Marcos</li>
+        <li>3: Alex</li> -->
+            <!-- Ya podemos usar el users porque ya lo compartimos desde el controlador con la vista, usamos el nombre de la propiedad-->
+            <!-- No es problema de la vista los datos que comparte sino del controlador quien los manda, cosa que no habíamos hecho hasta acá -->
+
+            <% for (let i=0 ; i<users.length; i++){ %>
+                <li>
+                    <%= users[i] %>
+                </li>
+                <% } %>
+
+        </ul>
+</body>
+
+</html>

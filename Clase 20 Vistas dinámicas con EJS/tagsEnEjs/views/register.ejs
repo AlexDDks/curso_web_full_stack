@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <h1>Register</h1>
+    <p>Hobbies</p>
+
+    <!-- <input class="par" type="text" name="hobbies">
+    <input class="impar" type="text" name="hobbies">
+    <input class="par" type="text" name="hobbies">
+    <input class="impar" type="text" name="hobbies"> -->
+
+
+    <!-- Si queremos N inputs podemos usar un for y no copiar y pegar 1 a 1 con etiquetas especiales-->
+    <!-- Nótese cómo también usamos un if con sus etiquetas especiales para colocar clases -->
+    <% for (let i=0 ; i<10 ; i++) { %>
+        <!-- Para imprimir se utiliza el siguiente taj: <%= %>, indica que todo lo que esté dentro debe ser impreso de manera literal, puede haber cualquier sentencia dinámica como la sentencia i del for -->
+        <!-- Con etiqueta ponemos el i+1 para que imprima el número del hobbie correspondiente -->
+        <label for="">Hobbie <%= i+1 %></label>
+
+        <!-- Si i es par, el input será tipo par -->
+        <% if(i%2==0) { %>
+            <% <input class='par' type='text' name='hobbies' %>
+                <!-- Hemos puesto un label junto a un input para tener mejor visulización -->
+                <% } else{ %>
+                    <% <input class='impar' type='text' name='hobbies' %>
+                        <% } %>
+                            <br>
+                            <% } %>
+</body>
+
+</html>
