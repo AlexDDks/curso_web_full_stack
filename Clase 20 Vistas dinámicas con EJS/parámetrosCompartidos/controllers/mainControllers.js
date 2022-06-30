@@ -7,11 +7,12 @@ const mainControllers = {
     },
 
     list: (req, res) => {
-        let users = ['Alex', 'Mario', 'Manuel']
+        //Acá definimos la variable que vamos a compartir con la vista
+        let users = ['Alex', 'Mario', 'Manuel', 'Miguel']
         // Para usar la variable users en la vista hacemos lo siguiente en el res.render:
         //Como segundo parámetro hacemos un objeto literal con las variables (el users), pero debemos de
         //ponerle un identificador entre ''('users) el cual será usado posteriormente
-        res.render('userList', { 'users': users })
+        res.render('userList', { 'users': users }) //Como valor de la propiedad pasamos la variable que queremos compartir a la vista
     },
 
     index: (req, res) => {
